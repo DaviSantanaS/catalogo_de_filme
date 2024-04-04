@@ -1,0 +1,13 @@
+<h1>Listagem de Diretores</h1>
+
+
+<div class="director-list">
+  <% @directors.each do |director| %>
+    <%= link_to director_path(director), class: 'genre-item' do %>
+      <%= director.name %>
+    <% end %>
+  <% end %>
+</div>
+<br>
+<br>
+<%= link_to 'Adicionar Diretor', new_director_path, class:'add-button' %>

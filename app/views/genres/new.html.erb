@@ -1,0 +1,13 @@
+<h1>Novo Gênero</h1>
+
+<%= form_with(model: @genre, url: genres_path, local: true) do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.submit %>
+<% end %>
+
+<br>
+<br>
+
+<%= link_to 'Voltar', :back, class: 'back-button' %>

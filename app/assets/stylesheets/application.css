@@ -1,0 +1,99 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.btn {
+    margin-bottom: 100px;
+}
+
+.btn {
+    border: 2px solid #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.btn + .btn {
+    margin-top: 20px;
+}
+
+.back-button {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid #8B4513;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #8B4513;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+
+.genre-list, .director-list, .movie-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.genre-item, .director-item, .movie-item {
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid #8B4513;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.genre-item:hover , .director-item:hover, .movie-item{
+    background-color: #F5DEB3;
+}
+
+.edit-button, .back-button {
+    padding: 5px 10px;
+    background-color: #8B4513;
+    color: white;
+    border: 2px solid #001F3F;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.edit-button:hover, .back-button:hover {
+    background-color: #A0522D;
+}
+
+.add-button {
+    padding: 5px 10px;
+    background-color: #0074D9;
+    color: white;
+    border: 2px solid #0074D9;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.add-button:hover {
+    background-color: #0056B3;
+}
+
+.home-button {
+    padding: 5px 10px;
+    background-color: #006400;
+    color: white;
+    border: 2px solid #006400;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.home-button:hover {
+    background-color: #008c00;
+    border: 2px solid #ffed00;
+}
+

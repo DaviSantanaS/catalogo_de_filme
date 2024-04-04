@@ -1,0 +1,27 @@
+<h1>Novo Diretor</h1>
+
+<%= form_with(model: @director, local: true) do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :nationality %>
+  <%= form.text_field :nationality %>
+
+  <%= form.label :birth_date %>
+  <%= form.date_field :birth_date %>
+
+  <%#= form.label :favorite_genre, "Gênero Favorito" %>
+  <%#= form.text_field :favorite_genre %>
+
+
+  <%= form.label :favorite_genre, "Gênero Favorito" %>
+  <%= form.select :favorite_genre, Genre.all.map { |genre| [genre.name, genre.name] }, { include_blank: true } %>
+
+  <%= form.submit %>
+
+<% end %>
+
+<br>
+<br>
+
+<%= link_to 'Voltar', :back, class: 'back-button' %>

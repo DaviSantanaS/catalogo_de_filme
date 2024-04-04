@@ -1,0 +1,18 @@
+<h1>Detalhes do Diretor</h1>
+
+<p><strong>Nome:</strong> <%= @director.name %></p>
+<p><strong>Nacionalidade:</strong> <%= @director.nationality %></p>
+<p><strong>Data de Nascimento:</strong> <%= @director.birth_date %></p>
+<p><strong>Gênero Favorito:</strong> <%= @director.favorite_genre %></p>
+
+<h2>Filmes Dirigidos por Este Diretor</h2>
+<ul>
+  <% @director.movies.each do |movie| %>
+    <li><%= movie.title %> (Ano: <%= movie.release_year %>)</li>
+  <% end %>
+</ul>
+<br>
+<br>
+<%= link_to 'Editar', edit_director_path(@director), class: 'edit-button' %> |
+<%= link_to 'Voltar', directors_path, class: 'back-button' %>
+

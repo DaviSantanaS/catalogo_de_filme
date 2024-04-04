@@ -1,0 +1,12 @@
+<h1>Listagem de Gêneros</h1>
+
+<div class="genre-list">
+  <% @genres.each do |genre| %>
+    <%= link_to genre_path(genre), class: 'genre-item' do %>
+      <%= genre.name %>
+    <% end %>
+  <% end %>
+</div>
+<br>
+<br>
+<%= link_to 'Adicionar Gênero', new_genre_path, class: 'add-button' %>

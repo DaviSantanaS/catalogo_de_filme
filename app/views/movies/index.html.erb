@@ -1,0 +1,14 @@
+<h1>Listagem de Filmes</h1>
+
+
+<div class="movie-list">
+  <% @movies.each do |movie| %>
+    <%= link_to movie_path(movie), class: 'genre-item' do %>
+      <%= movie.title %>
+    <% end %>
+  <% end %>
+</div>
+
+<br>
+<br>
+<%= link_to 'Adicionar Filme', new_movie_path, class: 'add-button' %>
